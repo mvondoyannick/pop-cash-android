@@ -1,0 +1,50 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar style="height:130px" class="sidetoolbar" color="dark">
+          <ion-row>
+            <ion-col>
+                <ion-icon slot="start" style="font-size:60px;margin: 15px" name="contact" color="medium" ></ion-icon>
+                <p class="sidemenup2">Connecté en tant que <br> {{nom}}</p>
+            </ion-col>
+            
+          </ion-row>
+        </ion-toolbar>
+      </ion-header>
+  <ion-content>
+     
+    <br><br>
+    <ion-list>
+      <button (click)=" onOperation()" ion-item menuClose class="sidemenuboutton">
+        <ion-icon class="sidemenuicon" name="aperture"></ion-icon>
+        Opérations
+      </button>
+      <button (click)="onCompte()" ion-item menuClose class="sidemenuboutton">
+        <ion-icon class="sidemenuicon" name="person"></ion-icon>
+        Mon Compte
+      </button>
+      <button (click)="onHistry()" ion-item menuClose class="sidemenuboutton">
+        <ion-icon class="sidemenuicon" name="list"></ion-icon>
+        Historique
+      </button>
+      <button (click)="onAide()" ion-item menuClose class="sidemenuboutton">
+        <ion-icon class="sidemenuicon" name="help"></ion-icon>
+        Aide
+      </button>
+      <button (click)="onApropos()" ion-item menuClose class="sidemenuboutton">
+        <ion-icon class="sidemenuicon" name="apps"></ion-icon>
+        A propos
+      </button>
+      <button (click)="onSocialShare()" ion-item menuClose class="sidemenuboutton">
+        <ion-icon class="sidemenuicon" name="share"></ion-icon>
+        Partager
+      </button>
+      <button (click)="onDeconnecter()" ion-item menuClose class="sidemenuboutton">
+        <ion-icon class="sidemenuicon" name="lock"></ion-icon>
+        Déconnection
+      </button>
+    </ion-list>
+    <p padding style="color:darkorchid;font-weight:bold">© Copyright: AGIS SA 2019/01A</p>
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

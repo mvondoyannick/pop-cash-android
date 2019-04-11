@@ -1,0 +1,72 @@
+<!--
+  Generated template for the PayerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Paiement Marchand</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-card>
+    <div style="margin:15px">
+      <img style="width:65%;height:40px" src="assets/imgs/product_logo.png" />
+    </div>
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          <h3>Mon marchand</h3>
+          <h2 style="font-weight: bold; ">{{receveur_name }}</h2>
+        </ion-label>
+      </ion-item>
+
+      <ion-item *ngIf="montant">
+        <ion-label>
+          <h3>Montant transaction</h3>
+          <h1 style="font-weight: bold; ">{{montant}} F CFA</h1>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <h3>Date</h3>
+          <h2 style="font-weight: bold; ">{{date}}</h2>
+        </ion-label>
+      </ion-item>
+
+    </ion-list>
+    <form [formGroup]="myForm">
+      <div style="margin:10px">
+        <ion-item class="item_input">
+          <ion-input [(ngModel)]="montant" formControlName="montant1" type="number" placeholder="Montant F CFA"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item class="item_input">
+          <ion-input [(ngModel)]="password" formControlName="password1" [type]="passwordType" placeholder="Mot de passe"></ion-input>
+          <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+        </ion-item>
+      </div>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <button (click)="onAnnule()" type="submit" ion-button block color="danger"
+              style="height:45px; margin-bottom:20px;  margin-top:25px; position:relative; color:rgb(253, 251, 251);  font-weight:bold">
+              Annuler</button>
+          </ion-col>
+          <ion-col>
+            <button (click)="onValidate()" [disabled]="! myForm.valid" type="submit" ion-button block color="primary"
+              style="height:45px; margin-bottom:20px;  margin-top:25px; position:relative; color:rgb(255, 255, 255);  font-weight:bold">
+              Valider</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-card>
+
+
+</ion-content>

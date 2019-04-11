@@ -1,0 +1,59 @@
+<!--
+  Generated template for the RecevoirPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Se faire payer</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="recevoir" class="div1">
+      <ion-icon slot="start" name="clipboard" color="medium" style="font-size:40px"></ion-icon>
+
+    <ion-item>
+      <ion-label style="font-size:20px; font-style:italic" floating>Montant en (F CFA)</ion-label>
+      <ion-input [(ngModel)]="montant" #focusInput style="font-size:30px; font-weight:bold;color:black" type="number">
+      </ion-input>
+    </ion-item>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col> <button (click)="onAnnule()" type="submit" ion-button block color="danger"
+            style="height:45px; margin-bottom:30px;  margin-top:25px; position:relative;  font-weight:bold">
+            Annuler</button></ion-col>
+        <ion-col> <button (click)="onValidePayement()" type="submit" ion-button block color="primary"
+            style="height:45px; margin-bottom:30px;  margin-top:25px; position:relative; font-weight:bold">
+            Valider</button> </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngIf="optionMontant" class="div2">
+    <br><br>
+    <p>Veuillez faire Scanner le QRCode</p>
+    <br><br>
+
+    <ion-grid style="position:absolute">
+      <ion-row>
+        <ion-col col-3></ion-col>
+        <ion-col col-12>
+          <ion-card style="margin-left:auto; margin-right: auto; display: block;width: 60%">
+            <qrcode [qrdata]="myAngularxQrCode" [size]="206" [level]="'M'"> </qrcode>
+          </ion-card>
+        </ion-col>
+        <ion-col col-3></ion-col>
+      </ion-row>
+
+      <p style="color:rgb(76, 123, 124); margin-top: -5px; font-size:30px">{{montant}} F CFA</p>
+    </ion-grid>
+
+  </div>
+
+     
+
+</ion-content>

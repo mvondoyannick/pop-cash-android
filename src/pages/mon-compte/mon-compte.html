@@ -1,0 +1,44 @@
+<!--
+  Generated template for the MonComptePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="dark">
+
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="more" style=" padding-right:20px;color:rgb(212, 232, 250)"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Gestion de Compte</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+  <img style="width:100%; height:35%" src="assets/imgs/fond_svg.png" />
+  <br>
+  <br>
+    <ion-grid>
+      <ion-row>
+        <ion-col (click)="onValidateSolde()">
+          <ion-icon color="primary" name="basket"></ion-icon><br>Mon solde
+        </ion-col>
+        <ion-col (click)="onValidateRetrait()">
+          <ion-icon color="primary" name="logo-buffer"></ion-icon><br>Retrait
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col (click)="onCrediter()">
+          <ion-icon color="primary" name="cloud-upload"></ion-icon><br>Créditer
+        </ion-col>
+        <ion-col (click)="onParametre()">
+          <ion-icon color="primary" name="settings"></ion-icon><br>Paramètres
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

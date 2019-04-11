@@ -1,0 +1,29 @@
+page-connexion {
+    ion-content{
+        text-align: center;
+        background-image: url('../assets/imgs/fond1.jpeg');
+        background-size: cover;
+        }
+    ion-input{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .item{
+        background-color: rgba(34, 34, 34, 0.157);
+        color: rgb(19, 10, 10);
+    }
+    ion-label{
+        color:rgb(32, 19, 19);
+        font-weight: lighter;
+
+    }
+    .passwordIcon{
+        font-size:2rem !important;
+        position: relative !important;
+        top: 22px !important;
+        margin: 0 auto !important;
+     }
+    ion-input{
+        color: white;
+    }
+}

@@ -1,0 +1,85 @@
+{
+  "name": "pop_cash",
+  "version": "0.0.1",
+  "author": "Ionic Framework",
+  "homepage": "http://ionicframework.com/",
+  "private": true,
+  "scripts": {
+    "start": "ionic-app-scripts serve",
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "lint": "ionic-app-scripts lint"
+  },
+  "dependencies": {
+    "@angular/animations": "5.2.11",
+    "@angular/common": "5.2.11",
+    "@angular/compiler": "5.2.11",
+    "@angular/compiler-cli": "5.2.11",
+    "@angular/core": "5.2.11",
+    "@angular/forms": "5.2.11",
+    "@angular/http": "5.2.11",
+    "@angular/platform-browser": "5.2.11",
+    "@angular/platform-browser-dynamic": "5.2.11",
+    "@ionic-native/barcode-scanner": "^4.20.0",
+    "@ionic-native/core": "~4.18.0",
+    "@ionic-native/geolocation": "^4.20.0",
+    "@ionic-native/native-ringtones": "^4.20.0",
+    "@ionic-native/social-sharing": "^4.20.0",
+    "@ionic-native/splash-screen": "~4.18.0",
+    "@ionic-native/status-bar": "~4.18.0",
+    "@ionic-native/text-to-speech": "^4.20.0",
+    "@ionic/storage": "2.2.0",
+    "angularx-qrcode": "^1.5.3",
+    "cordova-android": "6.3.0",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-file": "^6.0.1",
+    "cordova-plugin-geolocation": "^4.0.1",
+    "cordova-plugin-ionic-keyboard": "^2.1.3",
+    "cordova-plugin-ionic-webview": "^3.1.2",
+    "cordova-plugin-media": "^5.0.2",
+    "cordova-plugin-native-ringtones": "^0.2.5",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-tts": "^0.2.3",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "cordova-plugin-x-socialsharing": "^5.4.4",
+    "crypto-js": "^3.1.9-1",
+    "es6-promise-plugin": "^4.2.2",
+    "ionic-angular": "3.9.3",
+    "ionicons": "3.0.0",
+    "jsonwebtoken": "^8.5.0",
+    "phonegap-plugin-barcodescanner": "^8.0.1",
+    "rxjs": "5.5.11",
+    "sw-toolbox": "3.6.0",
+    "ts-md5": "^1.2.4",
+    "zone.js": "0.8.29"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "^3.2.2",
+    "@types/jsonwebtoken": "^8.3.0",
+    "typescript": "~2.6.2"
+  },
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "phonegap-plugin-barcodescanner": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-geolocation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
+      },
+      "cordova-plugin-x-socialsharing": {
+        "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
+      },
+      "cordova-plugin-native-ringtones": {},
+      "cordova-plugin-tts": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}
